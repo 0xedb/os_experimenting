@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <sys/wait.h>
 
 int main(void)
 {
@@ -13,6 +14,7 @@ int main(void)
   }
   else
   {
+    wait(NULL);
     printf("I am the parent process with ID: %d\n", getpid());
   }
   return 0;
